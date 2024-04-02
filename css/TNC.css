@@ -1,0 +1,22 @@
+body{background-color: #212F3D; margin:0; padding:0 ;font-family:'Mochiy Pop One', sans-serif;}
+
+address{color: aliceblue; }
+.Terms{
+    width:70% ;
+    padding-left: 15%; 
+    padding-bottom: 20%;
+}
+
+.logo{
+    width:20%;
+    padding-left: 40%;
+}
+
+.top{
+    text-align: center;
+}
+
+p.T{
+    text-align: left;
+    color: aliceblue;
+}

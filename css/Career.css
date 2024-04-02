@@ -1,0 +1,543 @@
+body{ font-family:'Mochiy Pop One', sans-serif;
+    background-color: #18222c;
+    margin:0; 
+    padding:0;
+}
+
+*{ 
+  margin: 0;
+  padding: 0;
+  font-family: 'Mochiy Pop One', sans-serif;
+}
+#mainNavbar{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: black
+}
+ 
+nav:after{
+  content: '';
+  clear: both;
+  display: table;
+}
+ 
+nav .logo{
+  float: left;
+  padding-left: 60px;
+}
+ 
+#headerLogo{
+  width: 200px;
+  margin: 15px 0;
+}
+ 
+nav ul{
+  float: right;
+  list-style: none;
+  margin-right: 40px;
+  position: relative;
+}
+ 
+nav ul li{
+  display: inline-block;
+  background-color: black;
+  margin: 15px 15px;
+}
+ 
+nav ul li a{
+  font-family: 'Mochiy Pop One', sans-serif;
+  color: white;
+  text-decoration: none;
+  line-height: 70px;
+  font-size: 18px;
+  padding: 8px 15px;
+}
+ 
+nav ul li a:hover{
+  color: #f66b01;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #f66b01,0 0 5px #f66b01;
+}
+ 
+nav ul ul li a:hover{
+  color: #f66b01;
+  box-shadow: none;
+}
+ 
+nav ul ul{
+  position:absolute;
+  top:90px;
+  border-top: 3px solid #f66b01;
+  opacity: 0;
+  visibility: hidden;
+  transition: top .3s;
+}
+ 
+nav ul ul ul{
+  border-top: none;
+}
+ 
+nav ul li:hover > ul{
+  top:70px;
+  opacity: 1;
+  visibility: visible;
+}
+ 
+nav ul ul li {
+  position: relative;
+  margin: 0px;
+  width: 150px;
+  float: none;
+  display: list-item;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+ 
+nav ul ul li a{
+  line-height: 50px;
+}
+ 
+nav ul ul ul li {
+  position: relative;
+  top: -70px;
+  left: 150px;
+}
+ 
+span .fa-plus{
+  margin-left: 40px;
+  font-size: 15px;
+}
+ 
+.show, .icon,.chkboxnav{
+  display: none;
+}
+ 
+@media all and (max-width: 968px) {
+  nav ul{
+    margin-right: 0;
+    float: left;
+  }
+ 
+  nav .logo{
+    padding-left: 30px;
+    width: 100%;
+  }
+ 
+  nav ul li, nav ul ul li{
+    display: block;
+    width:100%;
+  }
+ 
+  nav ul ul{
+    top: 70px;
+    position: static;
+    border-top: none;
+    float: none;
+    display: none;
+    opacity: 1;
+    visibility: visible;
+  }
+ 
+  nav ul ul ul li{
+    position: static;
+  }
+ 
+  nav ul ul li{
+    border-bottom: 0px;
+  }
+ 
+  nav ul ul a{
+    padding-left: 40px;
+  }
+ 
+  nav ul ul ul a{
+    padding-left: 80px;
+  }
+ 
+  .show{
+    display: block;
+    color: white;
+    font-size: 18px;
+    padding: 0 20px;
+    line-height: 70px;
+    cursor: pointer;
+  }
+ 
+  .show:hover{
+    color: #f66b01;
+  }
+ 
+  .icon{
+    display: block;
+    color: white;
+    position: absolute;
+    right: 40px;
+    line-height: 70px;
+    font-size: 25px;
+    cursor: pointer;
+    z-index: 1;
+  }
+ 
+  nav ul li a:hover{
+    box-shadow: none;
+  }
+ 
+  .show + a,ul{
+    display: none;
+  }
+  [id^=btn]:checked + ul{
+    display: block;
+  }
+}
+
+  #progress{
+    background-color: #03CC65;
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    height: 70px;
+    width: 70px;
+    display: none;
+    place-items: center;
+    border-radius: 50%;
+    box-shadow:0 0 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+ 
+#progress-value{
+    display:block;
+    height: calc(100% - 15px);
+    width: calc(100% - 15px);
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 35px;
+    color:#001A2E
+}
+
+
+i{
+    font-size: 50px; 
+    color: beige;
+}
+i:hover{
+    transform: scale(1.2);
+}
+
+
+footer{
+    background-color: #091720; 
+    width:100%; 
+    padding: 0;
+}
+
+h1.F{
+  font-family: 'Mochiy Pop One', sans-serif;
+    color:rgb(188, 188, 187); 
+    font-size: 18px; 
+    text-decoration: none;}
+
+a.F{
+    color:white; 
+    font-size: 14px; 
+    text-decoration: none;
+}
+a.F:hover{
+    color:#f66b01
+}
+
+address{
+    color: antiquewhite; 
+}
+img.btmlogo{
+    width:70%; 
+    padding-left: 20%; 
+    padding-top: 15%; 
+}
+
+
+.foot {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    }
+    
+.btmlogo{
+    grid-area: 1 / 1 / 2 / 2; 
+}
+.parentf { 
+    padding-top:  1%;
+    grid-area: 1 / 2 / 2 / 3; 
+    padding-left: 30%;
+}
+.parentf2 { 
+    grid-area: 1 / 3 / 2 / 4;
+    padding-top:  7%;
+}
+.SM { 
+    grid-area: 1 / 4 / 2 / 5; 
+    padding-top: 3%;
+}
+
+.career-img{
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../image/career.jpg); 
+    width:100%; 
+    height:220px ;
+    padding-top: 40px;
+    background-position: center; 
+    background-size:auto; 
+    position:relative; 
+    z-index: -1;
+}
+.careerTXT{
+    text-align: center; 
+    color: #efefef; 
+    font-size: 120px; 
+    font-family:'Mochiy Pop One', sans-serif;
+}
+
+img.CWWU{width:100%; 
+    max-height: 30%; 
+    justify-content: center;
+}
+
+
+img.chart{
+    width:100%; 
+    background-color: #ffffff;
+}
+
+label{
+    color:azure
+}
+
+
+
+h1.bla, 
+h2.bla, 
+h3.bla, 
+h4.bla{
+    font-family:'Mochiy Pop One', sans-serif;
+    color: cornsilk; 
+    text-align: center;
+}
+
+p{
+    font-family:'Mochiy Pop One', sans-serif;
+    color:cornsilk;
+    padding-left: 2%; 
+    padding-right: 2%;
+}
+p.bla{
+    text-align: center
+}
+
+.JU{height: 700px;
+    background-color: #18222D;
+    padding-top: 10%;
+    padding-left: 15%;
+}
+.eventform{
+   width: 70%;
+  
+   
+   background: #bfc0c0;
+   box-shadow:  0 0.9rem 1.7rem rgba(0,0,0,0.2);
+   position: absolute;
+   border-radius: 15px;
+   display: flex;
+}
+ 
+
+
+.eventform-left{
+    width:40% ;
+    
+    border-radius: 15px;
+    background-size: cover;
+    background-image: linear-gradient(rgba(0,0,0,0.25),rgba(0,0,0,0.25)),url(../image/Join\ us.jpeg);
+}
+ 
+.eventform-left h2{
+    text-align: center;
+    padding-top: 31%;
+    font-size: 86px;
+    font-weight: 500;
+    font-family: 'Mochiy Pop One', sans-serif;;
+    color: white;
+    text-shadow: 0 0.9rem 1.7rem rgba(0,0,0,0.3);
+}
+
+a.TNC{text-align: center; color: rgb(5, 5, 157); padding-left: 23%; text-decoration: underline; cursor:pointer; font-size: 12px;}
+ 
+.eventform-right{
+    width: 70%;
+    height: 450px;
+    margin-top: 13px;
+    margin-bottom: 25px;
+    display: flex;
+    align-content: center;
+}
+ 
+.box-input{
+    width: 70%;
+    height: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 20px;
+    margin-left: 30px;
+    margin-bottom: 15px;
+    border: none;
+    font-size: 14px;
+    outline: none;
+    border-radius: 15px;
+}
+
+.IR{margin-left:35px ;}
+.CF{margin-left:35px ;}
+
+.chk{margin-left:35px;
+     margin-top:10px ;
+     }
+ 
+
+ 
+#sub-btn{
+    width: 20%;
+    height: 30px;
+    margin-left: 7%;
+    margin-top: 2%;
+    border: none;
+    
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    border-radius: 100px;
+}
+ 
+#sub-btn:hover{
+    display: block;
+    width: 120px;
+    height: 30px;
+    color: blanchedalmond;
+    background-color: #4f5d75;
+    box-shadow: 10px 10px 5px  rgba(0,0,0,0.3);
+}
+ 
+#sub-btn a:hover{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+
+table{ 
+   
+    padding-left: 40%; 
+    padding-right: 20%; 
+    color:aliceblue ; 
+    padding-bottom:100px
+}
+td{
+    width: 30%; 
+    height: 30px;
+}
+
+caption{ 
+    font-family:'Mochiy Pop One', sans-serif;
+    text-align: center; 
+    caption-side: top; 
+    font-size: 50px; 
+    padding-bottom: 10px;
+}
+
+
+
+@media only screen and (max-width:1200px){
+  .career-img{
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../image/career.jpg); 
+    width:100%; 
+    height:180px ;
+    padding-top: 80px;
+    background-position: center; 
+    background-size:auto; 
+    position:relative; 
+    z-index: -1;
+}
+.careerTXT{
+    text-align: center; 
+    color: #ffffff; 
+    font-size: 80px; 
+    
+}
+
+
+  }
+
+
+
+
+@media only screen and (max-width:767px){
+.career-img{
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../image/career.jpg); 
+  width:100%; 
+  height:160px ;
+  padding-top: 100px;
+  background-position: center; 
+  background-size:auto; 
+  position:relative; 
+  z-index: -1;
+}
+.careerTXT{
+  text-align: center; 
+  color: #ffffff; 
+  font-size: 50px; 
+  font-family:'Mochiy Pop One',sans-serif;
+}
+
+
+.eventform-left h2{
+  text-align: center;
+  padding-top: 31%;
+  font-size: 50px;
+  font-weight: 500;
+  font-family: 'Mochiy Pop One', sans-serif;;
+  color: white;
+  text-shadow: 0 0.9rem 1.7rem rgba(0,0,0,0.3);
+}
+
+.Agree{font-size: 10px;
+}
+
+.btmlogo{ grid-area: 1 / 1 / 2 / 2; width:100% ; padding-left:140% ; padding-bottom: 10%;}
+  .parentf { grid-area: 2 / 1 / 3 / 2; padding-left: 100%; width:100%;padding-bottom: 10%;}
+  .parentf2 { grid-area: 2 / 2 / 2 / 4;padding-top:  25%; width:100%; padding-left: 70%; padding-bottom: 10%;}
+  .SM { grid-area: 4 / 1 / 5 / 2; padding-top: 5%; width:100%; padding-left: 150%;}
+  .btmp{color:#FFFFFF; font-size: 16px;}
+  
+  h1.F{color:rgb(188, 188, 187); font-size: 18px; text-decoration: none;padding-left: 13%;}
+  i{font-size: 20px; color: white; padding-left: 10%;}
+  i:hover{transform: scale(1.5);}
+  .btmp{color:#FFFFFF; font-size: 9px; }
+
+.box-input{
+    width: 32%;
+    height: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    
+    margin-top: 20px;
+    margin-left: 27px;
+    margin-bottom: 15px;
+    border: none;
+    font-size: 14px;
+    outline: none;
+    border-radius: 15px;
+  }
+    
+}

@@ -1,0 +1,859 @@
+*{
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  font-family: 'Mochiy Pop One', sans-serif;
+}
+
+/*New CSS Main Navbar*/
+#mainNavbar{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+background-color: #091720;
+}
+
+nav:after{
+content: '';
+clear: both;
+display: table;
+}
+
+nav .logo{
+float: left;
+padding-left: 60px;
+}
+
+#headerLogo{
+width: 200px;
+margin: 15px 0;
+}
+
+nav ul{
+float: right;
+list-style: none;
+margin-right: 40px;
+position: relative;
+}
+
+nav ul li{
+display: inline-block;  
+margin: 15px 15px;
+}
+
+nav ul li a{
+color: white;
+text-decoration: none;
+line-height: 70px;
+font-size: 18px;
+padding: 8px 15px;
+}
+
+nav ul li a:hover{
+color: #F66B0E;
+border-radius: 5px;
+box-shadow: 0 0 5px #F66B0E,0 0 5px #F66B0E;
+}
+
+nav ul ul li a:hover{
+color: #F66B0E;
+box-shadow: none;
+}
+
+nav ul ul{
+position:absolute;
+top:90px;
+border-top: 3px solid #F66B0E;
+opacity: 0;
+visibility: hidden;
+transition: top .3s;
+}
+
+nav ul ul ul{
+border-top: none;
+}
+
+nav ul li:hover > ul{
+top:70px;
+opacity: 1;
+visibility: visible;
+}
+
+nav ul ul li {
+position: relative;
+margin: 0px;
+width: 150px;
+float: none;
+display: list-item;
+border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+background-color: #091720;
+}
+
+nav ul ul li a{
+line-height: 50px;
+}
+
+nav ul ul ul li {
+position: relative;
+top: -70px;
+left: 150px;
+}
+
+span .fa-plus{
+margin-left: 40px;
+font-size: 15px;
+}
+
+.show, .icon{
+display: none;
+}
+
+.tickBox{
+display: none;
+}
+
+@media all and (max-width: 1200px) {
+nav ul{
+  margin-right: 0;
+  float: left;
+}
+
+nav .logo{
+  padding-left: 30px;
+  width: 100%;
+}
+
+nav ul li, nav ul ul li{
+  display: block;
+  width:100%;
+}
+
+nav ul ul{
+  top: 70px;
+  position: static;
+  border-top: none;
+  float: none;
+  display: none;
+  opacity: 1;
+  visibility: visible;
+}
+
+nav ul ul ul li{
+  position: static;
+}
+
+nav ul ul li{
+  border-bottom: 0px;
+}
+
+nav ul ul a{
+  padding-left: 40px;
+}
+
+nav ul ul ul a{
+  padding-left: 80px;
+}
+
+.show{
+  display: block;
+  color: white;
+  font-size: 18px;
+  padding: 0 20px;
+  line-height: 70px;
+  cursor: pointer;
+}
+
+.show:hover{
+  color: #F66B0E;
+}
+
+.icon{
+  display: block;
+  color: white;
+  position: absolute;
+  right: 40px;
+  line-height: 70px;
+  font-size: 25px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+nav ul li a:hover{
+  box-shadow: none;
+}
+
+.show + a,ul{
+  display: none;
+}
+[id^=btn]:checked + ul{
+  display: block;
+}
+}
+/*Navbar CSS END*/
+
+#progress{
+background-color: #03CC65;
+position: fixed;
+bottom: 20px;
+right: 10px;
+height: 70px;
+width: 70px;
+display: none;
+place-items: center;
+border-radius: 50%;
+box-shadow:0 0 10px rgba(0, 0, 0, 0.2);
+cursor: pointer;
+z-index: 1;
+}
+
+#progress-value{
+display:block;
+height: calc(100% - 15px);
+width: calc(100% - 15px);
+background-color: #FFFFFF;
+border-radius: 50%;
+display: grid;
+place-items: center;
+font-size: 35px;
+color:#001A2E
+}
+
+#promotionBanner {
+  background-image: url(../image/images/promotion\ background.jpg);
+  background-attachment: fixed;
+  text-align: center;
+  color: #EFEFEF;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#promotionBanner h1 {
+  font-family: 'Mochiy Pop One', sans-serif;
+  font-size: 120px;
+  padding-top: 40px;
+  height: 220px;
+}
+
+#promotionSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 50px;
+}
+
+#countdown {
+  height: 90px;
+  width: 100%;
+  text-align: center;
+  font-family: 'Mochiy Pop One', sans-serif;
+  color: white;
+  box-shadow: inset 0 0 15px 5px rgb(0 0 0 / 75%);
+  background-color: darkred;
+  font-size: 50px;
+}
+
+#carouselBg {
+  background-image: url(../image/images/darkGalaxy.jpg);
+  background-attachment: fixed;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover; 
+  position: relative;
+}
+
+#sliderTitle {
+  font-family: 'Mochiy Pop One', sans-serif;
+  text-align: center;
+  color: #B90E0A;
+  padding-top: 50px;
+}
+
+/* Carousel CSS Styles */
+.slider {
+  width: 800px;
+  height: 500px;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.slides {
+  width: 500%;
+  height: 500px;
+  display: flex;
+}
+
+.slides input {
+  display: none;
+}
+
+.slide {
+  width: 20%;
+  transition: 2s;
+}
+
+.slide img {
+  width: 800px;
+  height: 500px;
+}
+
+/******************************
+Css for manual slide navigation
+******************************/
+
+.navigation-manual {
+  position: absolute;
+  width: 800px;
+  margin-top:-40px;
+  display: flex;
+  justify-content: center;
+}
+
+.manual-btn {
+  border: 2px solid rgb(255, 177, 9);
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.manual-btn:not(:last-child){
+  margin-right: 40px;
+}
+
+.manual-btn:hover{
+  background: #EF8354;
+}
+
+#radio1:checked ~.first {
+  margin-left: 0;
+}
+
+#radio2:checked ~.first {
+  margin-left: -20%;
+}
+
+#radio3:checked ~ .first {
+  margin-left: -40%;
+}
+
+#radio4:checked ~ .first {
+  margin-left: -60%;
+}
+
+/* CSS For automatic Navigation*/
+.navigation-auto{
+  position: absolute;
+  display: flex;
+  width: 800px;
+  justify-content: center;
+  margin-top: 460px;
+}
+
+.navigation-auto div{
+  border: 2px solid #EF8354;
+  padding: 5px;
+  border-radius: 10px;
+  transition: 1s;
+}
+
+.navigation-auto div:not(:last-child){
+  margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1{
+  background: #EF8354;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2{
+  background: #EF8354;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3{
+  background: #EF8354;
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn4{
+  background: #EF8354;
+}
+
+/***************
+Card Style Rules
+***************/
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px 20px;
+  box-sizing: border-box;
+}
+
+.novelties {
+  width: 250px;
+  height: 250px;
+  border-radius: 20px;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+.backNovelties{
+  width: 250px;
+  height: 250px;
+  border-radius: 20px;
+}
+
+.novelties:hover + .backNovelties:hover{
+  transform: rotateY( 180deg ) ;
+  transition: transform 2.5s;
+}
+
+
+/* Remove extra left and right margins, due to padding in columns */
+.row {
+  padding: 70px 0;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+  color: white;
+  font-family: 'Mochiy Pop One', sans-serif;
+  border-radius: 10px;
+}
+
+.card h2{
+  margin: 20px;
+  color: #F8B229;
+}
+
+.card h3{
+  margin: 20px;
+  color: #036704;
+}
+
+.card-container{
+  /*left: 100px;*/
+  position: relative;
+  /*width: 250px;*/
+  height: 250px;
+}
+
+.thecard{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: all 2s ease;
+}
+
+.thecard:hover{
+  transform: rotateY(180deg);
+}
+
+.front{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.back{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+}
+
+#christmas {
+  background-image: url(../image/images/christmas\ background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover; 
+}
+
+#cny {
+  background-image: url(../image/images/cny\ background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover; 
+}
+
+#merdeka {
+  background-image: url(../image/images/merdeka\ background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover; 
+}
+
+#suggestion-container {
+  text-align: center;
+}
+
+#suggestionBackground {
+  background-image: url("../image/images/burgerAnatomy.jpg");
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover; 
+  position: relative;
+}
+
+#suggestionTitle {
+  font-family: 'Mochiy Pop One', sans-serif;
+  background-color: rgba(0, 0, 0, 0.9);
+  text-align: center;
+  color: wheat;
+  font-size: 30px;
+  padding-bottom: 20px;
+  margin-bottom: 10px;
+}
+
+#suggestionTitle h1 {
+  padding-bottom: 30px;
+}
+
+#suggestionTitle h2,h3 {
+  font-family: 'Mochiy Pop One', sans-serif;
+  text-align: center;
+  color: wheat;
+  font-size: 20px;
+  padding-top: 10px;
+}
+
+#suggestionTitle h3>span{
+  color: #036704;
+}
+
+#formContainer {
+  text-align: center;
+  margin: 0 auto;
+}
+
+#suggestionForm {
+  font-family: 'Mochiy Pop One', sans-serif;
+  background-color:rgba(0, 0, 0, 0.7);
+  width: 33%;
+  text-align: left;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+#suggestion-container label {
+  color:blanchedalmond;
+  font-size: x-large;
+}
+
+#suggestion-container label span{
+  color: red;
+}
+
+#suggestion-container input{
+  margin-top: 10px;
+  height: 25px;
+  width: 80%;
+  border-radius: 5px;
+  border-width: 3px;
+  border-style:solid;
+  background-color:darkgray;
+  padding-left: 10px;
+}
+
+textarea{
+  background-color:darkgray;
+  margin-bottom: 30px;
+  width: 415px;
+  height: 192px;
+}
+
+#file{
+  color: white;
+}
+
+#reset{
+  font-weight: 900;
+}
+#reset:hover{
+  background-color: firebrick;
+  color: white;
+}
+
+#submit{
+  font-weight: 900;
+}
+
+#submit:hover{
+  background-color: #036704;
+  color: white;
+}
+
+input[type=text]:focus{
+  border-color: red;
+  color: black;
+}
+
+input[type=tel]:focus{
+  border-color: red;
+}
+
+input[type=email]:focus{
+  border-color: red;
+}
+
+textarea:focus{
+  border-color: red;
+  color: black;
+}
+
+#custEmail:valid,#custNum:valid{
+  background-color: rgb(220, 255, 220);
+  background-image: url(../image/images/tick.png);
+  background-repeat: no-repeat;
+  background-position-x: right;
+}
+
+#custNum:invalid,#custEmail:invalid{
+  background-color: #FF5C5C;
+  background-image: url(../image/images/warning.png);
+  background-repeat: no-repeat;
+  background-position-x: right;
+}
+
+/* Footer CSS Section*/
+footer{
+background-color: #091720; 
+width:97.88%; 
+padding: 14px 16px;
+}
+
+i{
+  font-size: 50px; 
+  color: white;
+}
+
+i:hover{
+  transform: scale(1.2);
+  color:#F66B0E;
+}
+
+h1.F{
+color:rgb(188, 188, 187); 
+font-size: 18px; 
+text-decoration: none;
+}
+
+a.F{
+color:white; 
+font-size: 14px; 
+text-decoration: none;
+}
+
+a.F:hover{
+color:#F66B0E;
+}
+
+address{
+color: antiquewhite; 
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
+}
+
+img.btmlogo{
+width:70%; padding-left: 20%; 
+padding-top: 15%; 
+}
+
+.foot {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+grid-template-rows: 1fr;
+grid-column-gap: 0px;
+grid-row-gap: 0px;
+}
+
+.btmlogo{ 
+grid-area: 1 / 1 / 2 / 2; 
+}
+
+.parentf { 
+grid-area: 1 / 2 / 2 / 3; 
+padding-left: 30%;
+}
+
+.parentf2 { 
+grid-area: 1 / 3 / 2 / 4;
+padding-top:  10%;
+}
+
+.SM { 
+grid-area: 1 / 4 / 2 / 5; 
+padding-top: 3%;
+}
+
+.btmp{
+  color: white;
+}
+
+/* Responsive columns - one column layout (vertical) on small screens */
+@media screen and (max-width: 1200px) {
+#promotionBanner h1 {
+  font-size: 80px;
+  padding-top: 80px;
+  height: 180px;
+}
+
+#countdown{
+  font-size: 30px;
+  padding-top: 25px;
+}
+  
+/* Carousel CSS Styles */
+#sliderTitle{
+  font-size: 15px;
+}
+
+.slider {
+  width: 500px;
+  height: 312.5px;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.slides {
+  width: 500%;
+  height: 500px;
+  display: flex;
+}
+
+.slide img {
+  width: 500px;
+  height: 312.5px;
+}
+
+.button{
+  display: none;
+}
+
+/*Card*/
+.column {
+  width: 100%;
+  display: block;
+  margin-bottom: 20px;
+}
+
+textarea{
+width: 200px;
+height: 102px;
+}
+}
+
+@media screen and (max-width: 550px) {
+
+#promotionBanner h1 {
+  font-size: 50px;
+  padding-top: 100px;
+  height: 160px;
+}
+
+#countdown{
+  font-size: 20px;
+  padding-top: 50px;
+}
+
+#sliderTitle{
+  font-size: 12px;
+}
+  
+/* Carousel CSS Styles */
+.slider {
+  width: 400px;
+  height: 250px;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.slides {
+  width: 500%;
+  height: 250px;
+  display: flex;
+}
+
+.slide img {
+  width: 400px;
+  height: 250px;
+}
+
+.button{
+  display: none;
+}
+
+.column {
+  width: 100%;
+  display: block;
+  margin-bottom: 20px;
+}
+
+#suggestionTitle {
+  font-size: 20px;
+}
+
+textarea{
+width: 150px;
+height: 75px;
+}
+
+/*Footer */
+.btmlogo{ 
+  grid-area: 1 / 1 / 2 / 2; 
+  width:100% ; 
+  padding-left:140% ; 
+  padding-bottom: 10%;
+}
+.parentf { 
+  grid-area: 2 / 1 / 3 / 2;; 
+  padding-left: 100%; 
+  width:100%;
+  padding-bottom: 10%;
+}
+.parentf2 { 
+  grid-area: 2 / 2 / 2 / 4;
+  padding-top:  7%; 
+  width:100%; 
+  padding-left: 70%; 
+  padding-bottom: 10%;
+}
+
+.SM { 
+  grid-area: 4 / 1 / 5 / 2; 
+  padding-top: 5%; 
+  width:100%; 
+  padding-left: 155%;
+}
+.btmp{
+  color:#FFFFFF; 
+}
+ 
+h1.F{
+  color:rgb(188, 188, 187); 
+  font-size: 18px; 
+  text-decoration: none;
+  padding-left: 13%;
+}
+
+i{
+  font-size: 20px; 
+  color: beige; 
+  padding-left: 10%;
+}
+i:hover{
+  transform: scale(1.5);
+}
+}
