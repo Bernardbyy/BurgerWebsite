@@ -1,0 +1,427 @@
+<html>
+    <head>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+        <link rel="shortcut icon" href="image/burger-daddy-website-favicon-color.png">
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Feeback Form</title>
+        <link href="css/layoutMf.css" rel="stylesheet">
+        <link href="css/baseMf.css" rel="stylesheet">
+        <link href="css/stylesMf.css" rel="stylesheet">
+        <link href="css/mediaMf.css" rel="stylesheet">
+
+        <link rel="stylesheet" href="css/testStylesMf.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap" rel="stylesheet">
+
+        <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet"/>
+        
+
+        <script  type="text/javascript">
+            window.onload = init;
+
+            function init() {
+            document.forms[0].onsubmit = function() {
+                if (this.checkValidity()) {
+                    alert("Thank You For Your Feedback");
+                    window.location.href="contactus.html";
+                }
+                return false;
+            }
+            
+            function checkform(){
+                if(document.getElementById('loan').value == ""){
+                    document.form1.loan.focus();
+                } else if(document.getElementById('interest').value == ""){
+                    alert("u gay2");
+                    document.form1.interest.focus();
+                } else if(document.getElementById('month').value == ""){
+                    alert("u gay3");
+                    document.form1.month.focus();
+                }
+            }
+
+            document.getElementById("typeEmail").onclick = turnOnEmail;
+            document.getElementById("typePhone").onclick=turnOnPhone;
+            }
+
+            function turnOnEmail() {
+            document.getElementById("fbTel").disabled=true;
+            document.getElementById("fbEmail").disabled=false;
+            }
+
+            function turnOnPhone() {
+                document.getElementById("fbTel").disabled=false;
+                document.getElementById("fbEmail").disabled=true;
+            }
+
+
+        </script>
+
+        <style>
+
+            body{
+                background-image:url(image/background1.png);
+
+                box-shadow: inset 0 0 15px 5px rgba(0,0,0,0.75);
+
+                font-family: 'Mochiy Pop One', sans-serif;
+            }
+
+
+
+            div#mainTitle{
+                box-shadow:none;
+                background-color: rgba(0,0,0,0.01);
+            }
+
+            div#mainBody{
+                background-color: #00000089;
+
+                margin-left:10%;
+                margin-right:10%;
+                margin-bottom:5%;
+            }
+
+            main {
+                margin: 0 auto;
+                padding: 4rem 0;
+                width: 90%;
+                max-width: 60rem;
+            }
+            
+            form {
+                box-sizing: border-box;
+                padding: 2rem;
+                border-radius: 1rem;
+                background-color: hsl(0, 0%, 100%);
+                border: 4px solid hsl(0, 0%, 90%);
+                color: black;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 2rem;
+            }
+            
+            .full-width {
+                grid-column: span 2;
+            }
+            
+            button,fieldset,input,legend,select,textarea {
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+            
+                background-color: transparent;
+                border: none;
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+            }
+            
+            input,select,textarea {
+                border: 2px solid rgb(0, 0, 0);
+                background-color: white;
+                border-radius: 0.25rem;
+            }
+            
+            input:focus, select:focus, textarea:focus, input[type=radio]:active{
+                box-shadow:inset 0 0 2px 1px #EF8354;
+                outline:1px solid #EF8354 ;
+                
+            }
+            
+            
+            input[type="text"],input[type="email"], input[type="tel"], select,textarea {
+                font: 1.25rem / 1.5 sans-serif;
+                display: block;
+                box-sizing: border-box;
+                width: 100%;
+                padding: 0.5rem 0.75rem;
+            }
+            
+            textarea {
+                min-height: 10rem;
+            }
+            
+            select, input#fbLocation{
+                background: url("image/down-arrow.svg") no-repeat center right 0.75rem;
+            }
+            
+            input[type="radio"],input[type="checkbox"] {
+                height: 1.5em;
+                width: 1.5em;
+                vertical-align: middle;
+            }
+            
+            input[type="checkbox"]:checked {
+                background: url('image/check.svg') no-repeat center / 75% auto;
+            }
+            
+            input[type="radio"] {
+                border-radius: 50%;
+            }
+            
+            input[type="radio"]:checked {
+                background-image: radial-gradient(
+                    #EF8354 40%,
+                    transparent calc(40% + 1px)
+                );
+            }
+            
+            .large-label {
+                display: inline-block;
+                font: bold 1.5rem sans-serif;
+                margin-bottom: 0.5rem;
+            }
+            
+            .small-label {
+                vertical-align: middle;
+                display: inline-block;
+                margin-left: 0.25rem;
+                margin-right: 1.5rem;
+                font: 1.25rem sans-serif;
+            }
+            
+            button {
+                font: 1.25rem sans-serif;
+                border-radius: 0.25rem;
+                cursor: pointer;
+                padding: 0.75rem 1.25rem;
+            }
+            
+            button[type="submit"] {
+                background-color:#EF8354;
+                color: white;
+            }
+            
+            button[type="submit"]:hover {
+                background-color: #884326;
+            }
+            
+            button[type="reset"] {
+                text-decoration: underline;
+                margin-left: 1rem;
+            }
+            
+            button[type="reset"]:hover {
+                text-decoration: none;
+            }
+            
+            input[type=email][disabled],input[type=tel][disabled]{
+                background-color:grey;
+                opacity: 0.5;
+            }
+
+
+            @media (max-width:920px){
+                #mainTitle{
+                    font-size: 2%;
+                }
+            }
+
+        </style>
+    </head>
+
+    <body>
+<!---------------------------------------------------Header NAV--------------------------------------------------->       
+        <header>
+            <nav id="mainNavbar">
+                <div class="logo">
+                <a href="Home.html"><img src="image/burger-daddy-low-resolution-logo-color-on-transparent-background.png" alt="" id="headerLogo"></a>
+                </div>
+                <label for="btn" class="icon">
+                <span class="fa fa-bars"></span>
+                </label>
+                <input type="checkbox" id="btn">
+                <ul>
+        
+                <li>
+                    <label for="btn-1" class="show">MENU +</label>
+                    <a href="#">MENU ⛛</a>
+                    <input type="checkbox" id="btn-1">
+                    <ul>
+                        <li><a href="menu.html">MAIN</a></li>
+                        <li><a href="promotion.html">PROMOTION</a></li>
+                        <li><a href="orsum.html">SUMMARY</a></li>
+
+                    </ul>
+                </li>
+        
+                <li>
+                    <a href="Event.html">EVENTS </a>
+                </li>
+        
+                <li>
+                    <a href="review.html">REVIEWS </a>
+                </li>
+        
+                <li>
+                    <label for="btn-2" class="show">ABOUT US +</label>
+                    <a href="#">ABOUT US ⛛</a>
+                    <input type="checkbox" id="btn-2">
+                    <ul>
+                    <li><a href="aboutus.html">HISTORY</a></li>
+                    <li><a href="branch.html">BRANCHES</a></li>
+                    <li><a href="FAQ.html">FAQ</a></li>
+                    <li>
+                        <label for="btn-3" class="show">FIND US </label>
+                        <a href="contactus.html">FIND US
+                            <span class="fa fa-plus"></span>
+                        </a>
+                        <input type="checkbox" id="btn-3">
+                        <ul>
+                            <li><a href="contactus.html">CONTACT</a></li>
+                            <li><a href="contactus_form.html">FEEDBACK</a></li>
+                            <li><a href="Career.html">JOIN US</a></li>
+                        </ul>
+                    </li>
+                    </ul>
+                </li>
+                <li class="cart"><a href="cart.html">CART<ion-icon name="cart"></ion-icon> <span>0</span></a></li>
+                </ul>
+            </nav>
+            
+        </header>
+
+<!---------------------------------------------------BIG TITLE--------------------------------------------------->
+        <div id="mainTitle">
+            <center><h1>Feedback</h1><br><br><br><br><br><br><h1>Form</h1></center>
+        </div>
+
+<!---------------------------------------------------Main Body--------------------------------------------------->
+        <div id="mainBody">
+
+            <main>
+                <form action="https://www.burgerdaddies.com/fbBase.php" method="post">
+
+                <div class="full-width"><!--^acgip\-\d{6}$-->
+                    <label for="fbType" class="large-label">Feedback Category</label>
+                    <select id="fbType" name="fbType">
+                        <option value="1">Complaint</option>
+                        <option value="2">Suggestion</option>
+                        <option value="3">General Feedback</option>
+                        <option value="4">Appreciation</option>
+                        <option value="5">Question</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="fbFName" class="large-label">First Name*</label>
+                    <input type="text" id="fbFName" name="fbFName" required/>
+                </div>
+
+                <div>
+                    <label for="fbLName" class="large-label">Last Name*</label>
+                    <input type="text" id="fbLName" name="fbLName" required/>
+                </div>
+
+                <fieldset class="full-width">
+                    <legend class="large-label">How Shoud We Reach You**</legend>
+                    <input type="radio" name="grid" id="typeEmail" value="1-Email" required/>
+                    <label for="typeEmail" class="small-label">E-mail</label>
+                    <input type="radio" name="grid" id="typePhone" value="2-Phone" />
+                    <label for="typePhone" class="small-label">SMS</label>
+                </fieldset>
+
+                <div>
+                    <label for="fbEmail" class="large-label">E-mail*</label>
+                    <input type="email" id="fbEmail" name="fbEmail" placeholder="nnn@nnn.nnn" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"required/>
+                </div>
+
+                <div>
+                    <label for="fbTel" class="large-label">Phone Number*</label>
+                    <input type="tel" id="fbTel" name="fbTel" placeholder="(nnn)nnn-nnnn" pattern="^(01)[0-9][0-9]*[0-9]{7,8}$" required/>
+                </div>
+
+                <div>
+                    <label for="fbLocation" class="large-label">Which Branch</label>
+                    <select id="fbLocation" name="fbLocation">
+                        <option value="1b">Gurney Plaza</option>
+                        <option value="2b">Love Lane</option>
+                        <option value="3b">Karpal Singh</option>
+                        <option value="4b">Four Seasons</option>
+                        <option value="5b">Queensbay Mall</option>
+                        <option value="6b">South Bay PLaza</option>
+                    </select>
+                </div>
+
+
+                <div class="full-width">
+                    <label for="fbMessage" class="large-label">Message</label>
+                    <textarea id="fbMessage"></textarea>
+                </div>
+
+                <div class="full-width">
+                    <button type="submit">Send Response</button>
+                    <button type="reset">Clear Form</button>
+                </div>
+
+                </form>
+            </main>
+
+        </div>
+
+<!---------------------------------------------------FOOTER--------------------------------------------------->
+        <footer>
+            <div class="foot">
+                <div class="btmlogo">
+                    <img src="image/burger-daddy-low-resolution-logo-color-on-transparent-background.png" class="btmlogo">
+                </div>
+            
+                <div class="parentf">
+                <h1 class="F">Our Store</h1>
+                <h1 class="F"><a href="menu.html" class="F">Menu</a></h1>
+            
+                <h1 class="F"><a href="aboutus.html" class="F">About Us</a> </h1>
+
+
+            <h1 class="F"><a href="promotion.html" class="F">Promotions</a></h1>
+            
+
+            <h1 class="F"><a href="Event.html" class="F">Events</a></h1>
+            
+
+            
+            
+            
+                </div>
+                <div class="parentf2">
+                    <h1 class="F"><a href="review.html" class="F">Reviews</a></h1>
+            
+
+            <h1 class="F"><a href="contactus.html" class="F">Contact US</a></h1>
+            
+
+            <h1 class="F"><a href="cart.html" class="F">Order Now</a> </h1>
+
+
+            <h1 class="F"><a href="Career.html" class="F">Careers</a> </h1>
+            
+                
+                </div>
+                <br>
+
+                <div class="SM">
+                <script src="https://kit.fontawesome.com/52d2c78884.js" crossorigin="anonymous"></script>
+                <h1 class="F">Follow Us!</h1>
+                <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook" ></i></a>&nbsp;
+                <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"  ></i></a>&nbsp;
+                <a href="https://web.whatsapp.com/" target="_blank"><i class="fa-brands fa-whatsapp"  ></i></a>
+                <br/>
+
+                <br/>
+                <p class="btmp">All rights reserved </p>
+                </div>
+            </div>
+
+
+        </footer>
+
+        <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+        <script src="menu.js" type="text/javascript"></script>
+    </body>
+</html>
