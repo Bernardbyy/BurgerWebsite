@@ -5,7 +5,7 @@ Front End development tools utilized: HTML, CSS and Javascript
 
 Example Modules: <br>
 ## Menu Page:
-![image](https://github.com/Bernardbyy/BurgerWebsite/assets/75737130/e258c25e-867b-4c4d-9508-cab6ccf8d4f6)
+![image](https://github.com/Bernardbyy/BurgerWebsite/assets/75737130/e0d35016-9597-4ba9-9ae7-9672ed87718c)
 
 
 ## Promotions Page:
